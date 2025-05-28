@@ -1,4 +1,4 @@
-import Accordion from "../components/Accordion"
+import Accordion from "../components/Accordion";
 
 function AccordionPage() {
 
@@ -18,9 +18,9 @@ function AccordionPage() {
             label: 'Can I use CSS on a project?',
             content: 'You can use React on any project you want.'
         }
-    ]
+    ];
 
-    return <Accordion items={items}/>
+    return <Accordion items={items} />;
 }
 
-export default AccordionPage
+export default AccordionPage;

@@ -1,6 +1,6 @@
-import Link from './Link'
+import Link from './Link';
 
-function Sidebar () {
+function Sidebar() {
     const links = [
         { label: 'Dropdown', path: '/' },
         { label: 'Accordion', path: '/accordion' },
@@ -8,17 +8,17 @@ function Sidebar () {
         { label: 'Modal', path: '/modal' },
         { label: 'Table', path: '/table' },
         { label: 'Counter', path: '/counter' }
-    ]
+    ];
 
     const renderedLinks = links.map((link) => {
-        return <Link key={link.label} to={link.path} className="mb-3" activeClassName ="font-bold border-l-4 border-blue-500 pl-2">{link.label}</Link>
-    })
+        return <Link key={link.label} to={link.path} className="mb-3" activeClassName="font-bold border-l-4 border-blue-500 pl-2">{link.label}</Link>;
+    });
 
     return (
-        <div className="sticky top-0 overflow-y-scroll flex flex-col items-start">
+        <div className="sticky mt-20 overflow-y-scroll flex flex-col items-start">
             {renderedLinks}
         </div>
-    )
+    );
 }
 
-export default Sidebar
+export default Sidebar;

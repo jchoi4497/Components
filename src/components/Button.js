@@ -1,4 +1,4 @@
-import className from 'classnames'
+import className from 'classnames';
 
 function Button({ children, primary, secondary, success, warning, danger, outline, rounded, ...rest }) {
     const classes = className(rest.className, 'flex items-center px-3 py-1.5 border', {
@@ -14,9 +14,9 @@ function Button({ children, primary, secondary, success, warning, danger, outlin
         'text-green-500': outline && success,
         'text-yellow-400': outline && warning,
         'text-red-500': outline && danger
-    })
+    });
 
-    return <button {... rest} className={classes}>{children}</button>
+    return <button {...rest} className={classes}>{children}</button>;
 }
 
 
@@ -32,15 +32,15 @@ function Button({ children, primary, secondary, success, warning, danger, outlin
 Button.propTypes = {
     checkVariationValue: ({ primary, secondary, success, warning, danger }) => {
         const count = Number(!!primary)
-        + Number(!!secondary)
-        + Number(!!warning)
-        + Number(!!success)
-        + Number(!!danger)
+            + Number(!!secondary)
+            + Number(!!warning)
+            + Number(!!success)
+            + Number(!!danger);
 
-        if(count > 1) {
-            return new Error('Only one of primary, secondary, warning, danger can be true')
+        if (count > 1) {
+            return new Error('Only one of primary, secondary, warning, danger can be true');
         }
     }
-}
+};
 
-export default Button
+export default Button;
