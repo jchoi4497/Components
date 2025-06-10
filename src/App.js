@@ -8,9 +8,9 @@ import TablePage from './pages/TablePage';
 import CounterPage from './pages/CounterPage';
 
 function App() {
-    return <div className="container mx-auto grid grid-cols-6 gap-4">
-        <Sidebar />
-        <div className="col-span-5">
+    return <div className="container mx-auto grid grid-cols-1 md:grid-cols-6 gap-4">
+        <Sidebar className="md:col-span-1" />
+        <div className="md:col-span-5">
             <Route path="/accordion">
                 <AccordionPage />
             </Route>
